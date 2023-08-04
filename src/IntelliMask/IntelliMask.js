@@ -14,7 +14,7 @@ export default function IntelliMask() {
   const mask = async () => {
     fetch(`${maskUnmaskUrl}/anonymize`, {
       method: "POST",
-      body: { text: inputText },
+      body: JSON.stringify({ text: inputText }),
       headers: {
         "Content-Type": "application/json",
       },
@@ -31,10 +31,10 @@ export default function IntelliMask() {
   const unmask = async () => {
     fetch(`${maskUnmaskUrl}/deanonymize`, {
       method: "POST",
-      body: {
+      body: JSON.stringify({
         text: outputText,
         uuid,
-      },
+      }),
       headers: {
         "Content-Type": "application/json",
       },
