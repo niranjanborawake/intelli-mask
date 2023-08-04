@@ -19,9 +19,9 @@ export default function IntelliMask() {
         "Content-Type": "application/json",
       },
     })
-      .then((response) => {
+      .then(async (response) => {
         console.log({ response });
-        const { text, uuid: ruuid } = response.json();
+        const { text, uuid: ruuid } = await response.json();
         setOutputText(text);
         setUuid(ruuid);
         return response;
@@ -39,9 +39,9 @@ export default function IntelliMask() {
         "Content-Type": "application/json",
       },
     })
-      .then((response) => {
+      .then(async (response) => {
         console.log({ response });
-        const { text } = response.json();
+        const { text } = await response.json();
         setInputText(text);
         return response;
       })
