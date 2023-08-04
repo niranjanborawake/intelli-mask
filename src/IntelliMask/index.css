@@ -1,0 +1,31 @@
+.im-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+.im-app button {
+  margin: 20px 0;
+}
+.im-url-configuration {
+  width: 100%;
+  text-align: center;
+}
+.im-url-configuration input {
+  width: 80%;
+}
+.im-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.im-col {
+  width: 40vw;
+  margin: 20px;
+}
+.im-col textarea {
+  width: 100%;
+}
